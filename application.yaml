@@ -4,15 +4,15 @@ metadata:
   name: myapp-argo-application
   namespace: argocd
 spec:
-  project: default
+  project: test-argocd
 
   source:
     repoURL: https://github.com/cclgwu/argocd-lab.git
     targetRevision: HEAD
     path: dev
   destination: 
-    server: https://kubernetes.default.svc
-    namespace: myapp
+    #server: https://kubernetes.default.svc
+    namespace: test-argocd
 
   syncPolicy:
     syncOptions:
